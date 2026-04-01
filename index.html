@@ -145,9 +145,15 @@ ul{list-style:none}
 .menu-item-body{flex:1;padding:20px;display:flex;flex-direction:column;justify-content:center}
 .menu-item-body h3{font-size:.95rem;font-weight:800;color:var(--dark);margin-bottom:4px}
 .menu-item-body .desc{font-size:.78rem;color:var(--text-muted);line-height:1.5;margin-bottom:12px}
-.menu-item-footer{display:flex;align-items:center;justify-content:space-between}
+.menu-item-footer{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.menu-prices{display:flex;gap:14px;align-items:baseline}
 .menu-price small{font-size:.6rem;color:var(--text-muted);font-weight:600;text-transform:uppercase;letter-spacing:1px;display:block}
 .menu-price strong{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:900;color:var(--red)}
+.menu-price.completo strong{color:var(--gold);font-size:1.15rem}
+.menu-acompanhamentos{background:var(--cream);border-radius:var(--radius);padding:20px 28px;margin-top:28px;text-align:center;grid-column:1/-1}
+.menu-acompanhamentos h4{font-size:.85rem;font-weight:800;color:var(--dark);margin-bottom:8px;text-transform:uppercase;letter-spacing:1px}
+.menu-acompanhamentos p{font-size:.8rem;color:var(--text);line-height:1.6;margin:4px 0}
+.menu-acompanhamentos strong{color:var(--red)}
 .btn-order{background:var(--dark);color:var(--white);padding:8px 18px;border-radius:50px;font-size:.68rem;font-weight:700;border:none;cursor:pointer;transition:var(--transition);letter-spacing:.5px;text-transform:uppercase;display:inline-flex;align-items:center;gap:4px}
 .btn-order:hover{background:var(--red)}
 .btn-order svg{width:14px;height:14px}
@@ -404,84 +410,132 @@ ul{list-style:none}
     <div class="menu-filter reveal">
       <button class="active" onclick="filterMenu('all',this)">Todos</button>
       <button onclick="filterMenu('espetinhos',this)">Espetinhos</button>
-      <button onclick="filterMenu('pratos',this)">Pratos</button>
+      <button onclick="filterMenu('mistos',this)">Mistos</button>
       <button onclick="filterMenu('especiais',this)">Especiais</button>
     </div>
     <div class="menu-grid">
 
       <div class="menu-item reveal" data-cat="espetinhos">
-        <div class="menu-item-visual"><span class="menu-item-badge">Classico</span><img src="img/503994706_745751661302016_8660116674555795767_n.jpg" alt="Espetinho Simples"></div>
+        <div class="menu-item-visual"><span class="menu-item-badge">Classico</span><img src="img/503994706_745751661302016_8660116674555795767_n.jpg" alt="Carne"></div>
         <div class="menu-item-body">
-          <h3>Espetinho Simples</h3>
-          <p class="desc">Carne bovina selecionada, temperada e grelhada na brasa. O classico que todo mundo ama.</p>
+          <h3>Carne</h3>
+          <p class="desc">Espetinho de carne bovina selecionada, temperada e grelhada na brasa.</p>
           <div class="menu-item-footer">
-            <div class="menu-price"><small>a partir de</small><strong>R$ 10,00</strong></div>
-            <a href="https://wa.me/5547988645072?text=Ol%C3%A1!%20Quero%20pedir%20Espetinho%20Simples" target="_blank" class="btn-order">Pedir <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <div class="menu-prices"><div class="menu-price"><small>Simples</small><strong>R$ 15,00</strong></div><div class="menu-price completo"><small>Completo</small><strong>R$ 20,00</strong></div></div>
+            <a href="https://wa.me/5547988645072?text=Ol%C3%A1!%20Quero%20pedir%20Carne" target="_blank" class="btn-order">Pedir <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
           </div>
         </div>
       </div>
 
       <div class="menu-item reveal reveal-delay-1" data-cat="espetinhos">
-        <div class="menu-item-visual"><span class="menu-item-badge gold">Popular</span><img src="img/620513563_17896683606384380_6183310241985886729_n.jpg" alt="Espetinho Misto"></div>
+        <div class="menu-item-visual"><img src="img/503994706_745751661302016_8660116674555795767_n.jpg" alt="Frango"></div>
         <div class="menu-item-body">
-          <h3>Espetinho Misto</h3>
-          <p class="desc">Combinacao irresistivel de carnes variadas no espeto. Grelhado no ponto ideal na brasa.</p>
+          <h3>Frango</h3>
+          <p class="desc">Espetinho de frango suculento, temperado e grelhado na brasa.</p>
           <div class="menu-item-footer">
-            <div class="menu-price"><small>a partir de</small><strong>R$ 12,00</strong></div>
-            <a href="https://wa.me/5547988645072?text=Ol%C3%A1!%20Quero%20pedir%20Espetinho%20Misto" target="_blank" class="btn-order">Pedir <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <div class="menu-prices"><div class="menu-price"><small>Simples</small><strong>R$ 13,00</strong></div><div class="menu-price completo"><small>Completo</small><strong>R$ 18,00</strong></div></div>
+            <a href="https://wa.me/5547988645072?text=Ol%C3%A1!%20Quero%20pedir%20Frango" target="_blank" class="btn-order">Pedir <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
           </div>
         </div>
       </div>
 
       <div class="menu-item reveal reveal-delay-2" data-cat="espetinhos">
-        <div class="menu-item-visual"><span class="menu-item-badge gold">Mais Pedido</span><img src="img/503994706_745751661302016_8660116674555795767_n.jpg" alt="Espetinho Completo"></div>
+        <div class="menu-item-visual"><img src="img/620513563_17896683606384380_6183310241985886729_n.jpg" alt="Coracao"></div>
         <div class="menu-item-body">
-          <h3>Espetinho Completo</h3>
-          <p class="desc">Espetinho + baiao de dois + farofa + vinagrete + maionese. A refeicao completa!</p>
+          <h3>Coracao</h3>
+          <p class="desc">Coracao de frango bem temperado e grelhado no ponto certo na brasa.</p>
           <div class="menu-item-footer">
-            <div class="menu-price"><strong>R$ 16,00</strong></div>
-            <a href="https://wa.me/5547988645072?text=Ol%C3%A1!%20Quero%20pedir%20Espetinho%20Completo" target="_blank" class="btn-order">Pedir <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <div class="menu-prices"><div class="menu-price"><small>Simples</small><strong>R$ 15,00</strong></div><div class="menu-price completo"><small>Completo</small><strong>R$ 20,00</strong></div></div>
+            <a href="https://wa.me/5547988645072?text=Ol%C3%A1!%20Quero%20pedir%20Coracao" target="_blank" class="btn-order">Pedir <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
           </div>
         </div>
       </div>
 
-      <div class="menu-item reveal" data-cat="pratos">
-        <div class="menu-item-visual"><span class="menu-item-badge">Nordestino</span><img src="img/620513563_17896683606384380_6183310241985886729_n.jpg" alt="Baiao de Dois"></div>
+      <div class="menu-item reveal" data-cat="espetinhos">
+        <div class="menu-item-visual"><span class="menu-item-badge gold">Popular</span><img src="img/503994706_745751661302016_8660116674555795767_n.jpg" alt="Carne c/ Bacon"></div>
         <div class="menu-item-body">
-          <h3>Baiao de Dois Completo</h3>
-          <p class="desc">Baiao de dois + maionese + vinagrete + farofa + 1 espetinho. O autentico sabor nortista.</p>
+          <h3>Carne c/ Bacon</h3>
+          <p class="desc">Espetinho de carne envolto em bacon crocante. Combinacao perfeita na brasa.</p>
           <div class="menu-item-footer">
-            <div class="menu-price"><strong>R$ 18,00</strong></div>
-            <a href="https://wa.me/5547988645072?text=Ol%C3%A1!%20Quero%20pedir%20Bai%C3%A3o%20de%20Dois" target="_blank" class="btn-order">Pedir <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <div class="menu-prices"><div class="menu-price"><small>Simples</small><strong>R$ 15,00</strong></div><div class="menu-price completo"><small>Completo</small><strong>R$ 20,00</strong></div></div>
+            <a href="https://wa.me/5547988645072?text=Ol%C3%A1!%20Quero%20pedir%20Carne%20c%2F%20Bacon" target="_blank" class="btn-order">Pedir <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
           </div>
         </div>
       </div>
 
-      <div class="menu-item reveal reveal-delay-1" data-cat="especiais">
-        <div class="menu-item-visual"><span class="menu-item-badge">Sabado</span><img src="img/620513563_17896683606384380_6183310241985886729_n.jpg" alt="Feijoada Completa"></div>
+      <div class="menu-item reveal reveal-delay-1" data-cat="espetinhos">
+        <div class="menu-item-visual"><img src="img/620513563_17896683606384380_6183310241985886729_n.jpg" alt="Frango com Bacon"></div>
         <div class="menu-item-body">
-          <h3>Feijoada Completa</h3>
-          <p class="desc">Feijoada especial dos sabados, servida das 11h as 14h. Porcao generosa com todos acompanhamentos.</p>
+          <h3>Frango com Bacon</h3>
+          <p class="desc">Espetinho de frango com bacon crocante. Grelhado no ponto ideal.</p>
           <div class="menu-item-footer">
-            <div class="menu-price"><strong>R$ 35,00</strong></div>
-            <a href="https://wa.me/5547988645072?text=Ol%C3%A1!%20Quero%20pedir%20Feijoada" target="_blank" class="btn-order">Pedir <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <div class="menu-prices"><div class="menu-price"><small>Simples</small><strong>R$ 15,00</strong></div><div class="menu-price completo"><small>Completo</small><strong>R$ 20,00</strong></div></div>
+            <a href="https://wa.me/5547988645072?text=Ol%C3%A1!%20Quero%20pedir%20Frango%20com%20Bacon" target="_blank" class="btn-order">Pedir <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
           </div>
         </div>
       </div>
 
-      <div class="menu-item reveal reveal-delay-2" data-cat="especiais">
-        <div class="menu-item-visual"><span class="menu-item-badge">Domingo</span><img src="img/503994706_745751661302016_8660116674555795767_n.jpg" alt="Frango Assado"></div>
+      <div class="menu-item reveal reveal-delay-2" data-cat="espetinhos">
+        <div class="menu-item-visual"><span class="menu-item-badge gold">Especial</span><img src="img/503994706_745751661302016_8660116674555795767_n.jpg" alt="Medalhao"></div>
         <div class="menu-item-body">
-          <h3>Frango Assado de Domingo</h3>
-          <p class="desc">Frango inteiro assado + arroz + farofa. Perfeito para o almoco em familia. Sob encomenda!</p>
+          <h3>Medalhao</h3>
+          <p class="desc">Medalhao de carne nobre grelhado na brasa. Macio e suculento.</p>
           <div class="menu-item-footer">
-            <div class="menu-price"><small>a partir de</small><strong>R$ 49,99</strong></div>
-            <a href="https://wa.me/5547988645072?text=Ol%C3%A1!%20Quero%20encomendar%20Frango%20Assado" target="_blank" class="btn-order">Encomendar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <div class="menu-prices"><div class="menu-price"><small>Simples</small><strong>R$ 15,00</strong></div><div class="menu-price completo"><small>Completo</small><strong>R$ 20,00</strong></div></div>
+            <a href="https://wa.me/5547988645072?text=Ol%C3%A1!%20Quero%20pedir%20Medalhao" target="_blank" class="btn-order">Pedir <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
           </div>
         </div>
       </div>
 
-    </div>
+      <div class="menu-item reveal" data-cat="espetinhos">
+        <div class="menu-item-visual"><span class="menu-item-badge">Nordestino</span><img src="img/620513563_17896683606384380_6183310241985886729_n.jpg" alt="Carne de Sol"></div>
+        <div class="menu-item-body">
+          <h3>Carne de Sol</h3>
+          <p class="desc">Espetinho de carne de sol autentica, com o sabor inconfundivel do Nordeste.</p>
+          <div class="menu-item-footer">
+            <div class="menu-prices"><div class="menu-price"><small>Simples</small><strong>R$ 15,00</strong></div><div class="menu-price completo"><small>Completo</small><strong>R$ 22,00</strong></div></div>
+            <a href="https://wa.me/5547988645072?text=Ol%C3%A1!%20Quero%20pedir%20Carne%20de%20Sol" target="_blank" class="btn-order">Pedir <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item reveal" data-cat="Misto Carne c/ Frango">
+        <div class="menu-item-visual"><span class="menu-item-badge mistos">Espetinho misto de carne bovina e frango</span><img src="img/503994706_745751661302016_8660116674555795767_n.jpg" alt="13"></div>
+        <div class="menu-item-body">
+          <h3>13</h3>
+          <p class="desc">18</p>
+          <div class="menu-item-footer">
+            <div class="menu-prices"><div class="menu-price"><small>Simples</small><strong>R$ undefined</strong></div><div class="menu-price completo"><small>Completo</small><strong>R$ undefined</strong></div></div>
+            <a href="https://wa.me/5547988645072?text=Ol%C3%A1!%20Quero%20pedir%2013" target="_blank" class="btn-order">Pedir <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item reveal" data-cat="Misto Carne Calabresa">
+        <div class="menu-item-visual"><span class="menu-item-badge mistos">Espetinho misto de carne bovina e calabresa</span><img src="img/620513563_17896683606384380_6183310241985886729_n.jpg" alt="13"></div>
+        <div class="menu-item-body">
+          <h3>13</h3>
+          <p class="desc">18</p>
+          <div class="menu-item-footer">
+            <div class="menu-prices"><div class="menu-price"><small>Simples</small><strong>R$ undefined</strong></div><div class="menu-price completo"><small>Completo</small><strong>R$ undefined</strong></div></div>
+            <a href="https://wa.me/5547988645072?text=Ol%C3%A1!%20Quero%20pedir%2013" target="_blank" class="btn-order">Pedir <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item reveal" data-cat="Misto Carne Calabresa Frango">
+        <div class="menu-item-visual"><span class="menu-item-badge mistos">Espetinho misto de carne, calabresa e frango</span><img src="img/503994706_745751661302016_8660116674555795767_n.jpg" alt="15"></div>
+        <div class="menu-item-body">
+          <h3>15</h3>
+          <p class="desc">20</p>
+          <div class="menu-item-footer">
+            <div class="menu-prices"><div class="menu-price"><small>Simples</small><strong>R$ undefined</strong></div><div class="menu-price completo"><small>Completo</small><strong>R$ undefined</strong></div></div>
+            <a href="https://wa.me/5547988645072?text=Ol%C3%A1!%20Quero%20pedir%2015" target="_blank" class="btn-order">Pedir <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </div>
+<div class="menu-item" data-category="especiais"><div class="menu-item-img"><img src="img/503994706_745751661302016_8660116674555795767_n.jpg" alt="Feijoada Completa" loading="lazy"></div><div class="menu-item-info"><h4>Feijoada Completa</h4><p>Feijoada tradicional com todos os acompanhamentos</p><div class="menu-item-footer"><div class="menu-price"><small>Porção</small><strong>R$ 35</strong></div><a href="https://wa.me/5547991097744?text=Olá! Gostaria de pedir: Feijoada Completa - R$35" class="btn btn-whatsapp" style="padding:8px 18px;font-size:.7rem" target="_blank">Pedir</a></div></div></div><div class="menu-item" data-category="especiais"><div class="menu-item-img"><img src="img/620513563_17896683606384380_6183310241985886729_n.jpg" alt="Frango Assado" loading="lazy"></div><div class="menu-item-info"><h4>Frango Assado</h4><p>Frango assado inteiro, tempero especial da casa</p><div class="menu-item-footer"><div class="menu-price"><small>Inteiro</small><strong>R$ 49,99</strong></div><a href="https://wa.me/5547991097744?text=Olá! Gostaria de pedir: Frango Assado - R$49,99" class="btn btn-whatsapp" style="padding:8px 18px;font-size:.7rem" target="_blank">Pedir</a></div></div></div><div class="menu-acompanhamentos"><h4>Acompanhamentos</h4><p><strong>Completo:</strong> Baião de Dois, Vinagrete, Maionese e Farofa</p><p><strong>Simples:</strong> Farofa</p></div>
+</div>
   </div>
 </section>
 
